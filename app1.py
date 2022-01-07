@@ -70,9 +70,9 @@ def temp_monthly():
     return jsonify(temps = temps)
 
 # Route for statistical analysis
-## Min/max/avg temperaturres
+## Min/max/avg temperatures
 @app.route("/api/v1.0/temp/<start>")
-@app.route("/api/v1.0/temp/<end>")
+@app.route("/api/v1.0/temp/<start>/<end>") # need start and end date
 def stats(start=None, end=None):
     # query to get min, avg, max temperatures
     ## Create list 'sel' with ^
